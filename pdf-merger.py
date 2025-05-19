@@ -13,6 +13,10 @@ def combine_pdfs(pdf1_path, pdf2_path, output_pdf_path):
         # Find the total number of pages in both PDFs
         pdf1_pages = len(pdf1_reader.pages)
         pdf2_pages = len(pdf2_reader.pages)
+        
+        if pdf1_pages != pdf2_pages :
+            print("PDF1 Length != PDF2 Length")
+            exit()
 
         # We will alternate between the first page from pdf1 and the last page from pdf2
         # until all pages are added to the new PDF
@@ -30,9 +34,9 @@ def combine_pdfs(pdf1_path, pdf2_path, output_pdf_path):
             pdf_writer.write(output_pdf)
 
 # Example usage:
-pdf1_path = "/Users/siva/Downloads/ReactJS.pdf"  # Path to the first PDF
-pdf2_path = "/Users/siva/Downloads/ReactJS-A.pdf"  # Path to the second PDF
-output_pdf_path = "/Users/siva/Downloads/ReactJS-C.pdf"  # Path where the combined PDF will be saved
+pdf1_path = "/Users/siva/Downloads/Solid-A.pdf"  # Path to the first PDF
+pdf2_path = "/Users/siva/Downloads/Solid-B.pdf"  # Path to the second PDF
+output_pdf_path = "/Users/siva/Downloads/Solid.pdf"  # Path where the combined PDF will be saved
 
 combine_pdfs(pdf1_path, pdf2_path, output_pdf_path)
 print(f"Combined PDF saved as {output_pdf_path}")
