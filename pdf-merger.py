@@ -34,9 +34,9 @@ def combine_pdfs(pdf1_path, pdf2_path, output_pdf_path):
             pdf_writer.write(output_pdf)
 
 # Example usage:
-pdf1_path = "/Users/siva/Downloads/Solid-A.pdf"  # Path to the first PDF
-pdf2_path = "/Users/siva/Downloads/Solid-B.pdf"  # Path to the second PDF
-output_pdf_path = "/Users/siva/Downloads/Solid.pdf"  # Path where the combined PDF will be saved
+pdf1_path = "/Users/siva/Downloads/Spring-A.pdf"  # Path to the first PDF
+pdf2_path = "/Users/siva/Downloads/Spring-B.pdf"  # Path to the second PDF
+output_pdf_path = "/Users/siva/Downloads/Spring.pdf"  # Path where the combined PDF will be saved
 
 combine_pdfs(pdf1_path, pdf2_path, output_pdf_path)
 print(f"Combined PDF saved as {output_pdf_path}")
